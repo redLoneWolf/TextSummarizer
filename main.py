@@ -10,7 +10,7 @@ if USE_GPU:
 else:
     summarizer = pipeline("summarization")
 
-app = Flask(__name__,template_folder='/content')
+app = Flask(__name__)
 app.jinja_env.variable_start_string = '[['
 app.jinja_env.variable_end_string = ']]'
 run_with_ngrok(app)   
